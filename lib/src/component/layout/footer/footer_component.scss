@@ -1,0 +1,56 @@
+@import 'package:angular_components/css/material/material';
+
+:host {
+
+}
+
+.footer-layout {
+  background-color: #FAFAFA;
+}
+
+.footer-block {
+
+}
+
+.footer-block {
+  text-align: right;
+
+  material-list {
+    display: inline-flex;
+    background-color: transparent;
+  }
+}
+
+.subscribe-title {
+  @include mat-font-title;
+}
+
+material-button {
+  background: $mat-blue;
+  color: $mat-white;
+}
+
+.fill-width {
+  align-items: baseline;
+  display: flex;
+  padding: $mat-grid;
+
+  material-input {
+    flex-grow: 1;
+    margin-left: $mat-grid;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer-block material-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-about-subscribe {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

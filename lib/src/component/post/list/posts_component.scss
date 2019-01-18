@@ -1,0 +1,55 @@
+@import 'package:angular_components/css/material/material';
+
+:host {
+  display: flex;
+}
+
+.mdc-card {
+  width: $mat-grid * 48;
+}
+
+.mdc-card__media {
+
+}
+
+.mdc-card__media--image {
+  width: 100%;
+}
+
+.mdc-card__media-content {
+  padding: $mat-grid;
+}
+
+.mdc-card__primary {
+  padding: $mat-grid * 2;
+}
+
+.mdc-card__primary-title {
+  display: inline-flex;
+  @include mat-font-title;
+  line-height: 1em; // legacy setting
+  margin: 0;
+
+  .first {
+    color: $mat-white;
+    font-weight: lighter;
+  }
+  .second {
+    color: $mat-white;
+    font-weight: bold;
+  }
+}
+
+.mdc-card__secondary {
+  @include mat-font-body;
+  padding: 0 $mat-grid * 2 $mat-grid;
+}
+
+.mdc-card__actions {
+  cursor: pointer;
+}
+
+section {
+  display: block;
+  margin: $mat-grid * 4;
+}

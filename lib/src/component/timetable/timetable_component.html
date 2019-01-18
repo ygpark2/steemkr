@@ -1,0 +1,53 @@
+<div class="timetable-layout">
+    <div class="layout-container">
+        <div class="name-desc">
+            <h1 class="name-headline">Timetable</h1>
+            <h2 class="name-sub-headline">
+                6:00AM-7:00 Mon-Fri <br/>
+                7:30AM-8:30 Sat <br/>
+                9:20AM-10:20 Mon-Fri <br/>
+                10:30AM-11:30 <br/>
+                5:20PM-6:20 Mon-Fri <br/>
+                6:30PM-7:30 Mon-Thu <br/>
+            </h2>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-24"></div>
+            <div class="pure-u-22-24">
+                <table class="pure-table pure-table-horizontal" style="width: 100%">
+                    <thead style="text-align: center;">
+                    <tr>
+                        <template ngFor let-weekdayName [ngForOf]="weekdays" let-idx="index">
+                        <th [ngStyle]="setThBgStyles(idx)">
+                            {{ weekdayName }}
+                            <br/>
+                            {{ getDate(idx + 1) | date:'y-MM-dd' }}
+                        </th>
+                        </template>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <template [ngIf]="timeTables.length > 0">
+                        <template ngFor let-hour [ngForOf]="getMaxDayOfWeek(timeTables.first.schedule)">
+                        <tr>
+                            <td>1</td>
+                            <td>Honda</td>
+                            <td>Accord</td>
+                            <td>2009</td>
+                            <td>Honda</td>
+                            <td>Accord</td>
+                            <td>2009</td>
+                        </tr>
+                        </template>
+                    </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pure-u-1-24"></div>
+        </div>
+
+    </div>
+</div>
+

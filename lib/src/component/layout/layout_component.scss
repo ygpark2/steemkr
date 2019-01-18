@@ -1,0 +1,9 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_tab/mixins';
+@import 'package:angular_components/app_layout/mixins';
+
+:host {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}

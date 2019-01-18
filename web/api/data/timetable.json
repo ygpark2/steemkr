@@ -1,0 +1,109 @@
+{
+  "data": [
+    {
+        "id": "1",
+        "title": "Yoga Class",
+        "content": "This Yoga class will be done by Dong Sung",
+        "teacher": "Dong Sung",
+        "schedule": {
+          "Mon": [
+            {
+              "startTime": "6:00AM",
+              "endTime": "7:00AM"
+            },
+            {
+              "startTime": "9:20AM",
+              "endTime": "10:20AM"
+            },
+            {
+              "startTime": "5:20PM",
+              "endTime": "6:20PM"
+            },
+            {
+              "startTime": "6:30PM",
+              "endTime": "7:30PM"
+            }
+          ],
+          "Tue": [
+            {
+              "startTime": "6:00AM",
+              "endTime": "7:00AM"
+            },
+            {
+              "startTime": "9:20AM",
+              "endTime": "10:20AM"
+            },
+            {
+              "startTime": "5:20PM",
+              "endTime": "6:20PM"
+            },
+            {
+              "startTime": "6:30PM",
+              "endTime": "7:30PM"
+            }
+          ],
+          "Wed": [
+            {
+              "startTime": "6:00AM",
+              "endTime": "7:00AM"
+            },
+            {
+              "startTime": "9:20AM",
+              "endTime": "10:20AM"
+            },
+            {
+              "startTime": "5:20PM",
+              "endTime": "6:20PM"
+            },
+            {
+              "startTime": "6:30PM",
+              "endTime": "7:30PM"
+            }
+          ],
+          "Thu": [
+            {
+              "startTime": "6:00AM",
+              "endTime": "7:00AM"
+            },
+            {
+              "startTime": "9:20AM",
+              "endTime": "10:20AM"
+            },
+            {
+              "startTime": "5:20PM",
+              "endTime": "6:20PM"
+            },
+            {
+              "startTime": "6:30PM",
+              "endTime": "7:30PM"
+            }
+          ],
+          "Fri": [
+            {
+              "startTime": "6:00AM",
+              "endTime": "7:00AM"
+            },
+            {
+              "startTime": "9:20AM",
+              "endTime": "10:20AM"
+            },
+            {
+              "startTime": "5:20PM",
+              "endTime": "6:20PM"
+            }
+          ],
+          "Sat": [
+            {
+              "startTime": "7:30AM",
+              "endTime": "8:30AM"
+            },
+            {
+              "startTime": "10:30AM",
+              "endTime": "11:30AM"
+            }
+          ],
+          "Sun": []
+        }
+    }
+  ]
+}

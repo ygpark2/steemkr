@@ -1,0 +1,26 @@
+<form (ngSubmit)="submitForm()" *ngIf="service.user != null" id="notes-form">
+    <div>
+        <h2>Add new awesome note</h2>
+        <div>
+            <label for="new-post">Your awesome note<sup>*</sup></label><br>
+            <input type="text" id="new-post-first" placeholder="Post first" [(ngModel)]="post.first">
+            <input type="text" id="new-post-second" placeholder="Post second" [(ngModel)]="post.second">
+            <textarea placeholder="Post description" id="new-post" cols="10" rows="5" [(ngModel)]="post.description"
+                      required></textarea>
+        </div>
+        <div id="note-image">
+            <label for="upload-image">Attach image</label><br>
+            <input type="file" id="upload-image" accept="image/*" *ngIf="post.imageUrl == null"
+                   (change)="uploadImage($event)" [disabled]="fileDisabled">
+            <div id="actual-image-container" *ngIf="post.imageUrl != null">
+                <img [src]="post.imageUrl" width="200" id="actual-image">
+                <a id="actual-image-remove" title="Remove image" (click)="removeImage()">
+                    <span class="material-icons">delete</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <input type="submit" value="Add" #submit id="submit">
+        </div>
+    </div>
+</form>

@@ -1,0 +1,43 @@
+@import 'package:angular_components/css/material/material';
+
+:host {
+
+}
+
+.admin-layout {
+  width: 100vw;
+  padding-top: $mat-grid * 4;
+  padding-bottom: $mat-grid * 4;
+}
+
+.profile {
+  width: 100vw;
+  text-align: center;
+}
+
+.profile-image {
+  width: $mat-grid * 8;
+  height: $mat-grid * 8;
+  border-radius: $mat-grid * 8;
+}
+
+.profile-name {
+  @include mat-font-title;
+}
+
+.profile-email {
+  @include mat-font-subhead;
+}
+
+.login {
+  width: 100vw;
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+
+material-input {
+  padding: $mat-grid;
+}

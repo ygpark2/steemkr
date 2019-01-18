@@ -1,0 +1,67 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_button/mixins';
+@import 'package:angular_components/material_chips/mixins';
+
+$mdc-card-image: 'images/yns-rocket-illustration.svg';
+
+:host {
+  display: flex;
+}
+
+@include material-chip-theme(
+        $primary-bgcolor: $mat-blue-A700,
+        $primary-bgcolor-hover: $mat-blue-900,
+        $left-icon-color: $mat-white,
+        $left-icon-bgcolor: $mat-indigo,
+        $chip-selector: '.my-theme'
+);
+
+
+.clickable {
+  cursor: pointer;
+  justify-content: center;
+}
+
+.home-layout {
+  width: 100%;
+}
+
+.home-banner {
+  width: 100%;
+  text-align: center;
+}
+
+.home-banner-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-headline {
+  color: $mat-indigo;
+}
+
+.home-sub-head {
+  color: $mat-indigo;
+  @include mat-font-subhead;
+}
+
+@media screen and (max-width: 50%) {
+  ::ng-deep .home-headline {
+    color: $mat-indigo;
+    @include mat-font-headline;
+  }
+
+  .home-banner-image {
+    max-width: $mat-grid * 12;
+  }
+
+}
+@media screen and (min-width: 50%) {
+  .home-layout {
+    display: inline-flex;
+  }
+
+  .home-banner-text {
+    margin-top: 30%;
+  }
+}

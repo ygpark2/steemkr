@@ -1,0 +1,28 @@
+<section *ngFor="let post of posts">
+    <div class="mdc-card">
+        <div class="mdc-card__media">
+            <img  class="mdc-card__media--image" *ngIf="post.imageUrl != null" [src]="post.imageUrl">
+            <div class="mdc-card__media-content">
+                <div class="mdc-card__primary">
+                    <div class="mdc-card__primary-title">
+                        <h3 class="first" *ngIf="post.first?.isNotEmpty">{{post.first}}</h3>
+                        <h3 class="second">{{post.second}}</h3>
+                    </div>
+                    <div  class="mdc-card__secondary">
+                        <p class="description">{{post.description}}</p>
+                    </div>
+                    <div class="mdc-card__actions">
+                        <div class="mdc-card__action-buttons">
+                            <material-button>Check Domain Avaliability</material-button>
+                        </div>
+                        <div class="mdc-card__actions-icons" *ngIf="service.user != null">
+                            <material-button icon (trigger)="service.removeItem(post.key)">
+                                <material-icon icon="delete" ></material-icon>
+                            </material-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+<header class="material-header shadow">
+    <div class="material-header-row">
+        <a class="header-logo" [routerLink]="RoutePaths.home.toUrl()" [routerLinkActive]="'active'">
+            <span class="material-header-title">Mindful Yoga</span>
+        </a>
+        <div class="material-spacer"></div>
+        <nav class="material-navigation">
+            <a [routerLink]="RoutePaths.home.toUrl()" [routerLinkActive]="'active'">Home</a>
+        </nav>
+        <nav class="material-navigation">
+            <a [routerLink]="RoutePaths.timetable.toUrl()" [routerLinkActive]="'active'">Timetable</a>
+        </nav>
+        <nav class="material-navigation">
+            <a [routerLink]="RoutePaths.pricing.toUrl()" [routerLinkActive]="'active'">Pricing</a>
+        </nav>
+        <nav class="material-navigation">
+            <a [routerLink]="RoutePaths.about.toUrl()" [routerLinkActive]="'active'">About (Teachers)</a>
+        </nav>
+        <nav class="material-navigation">
+            <a [routerLink]="RoutePaths.contact.toUrl()" [routerLinkActive]="'active'">Contact</a>
+        </nav>
+    </div>
+</header>

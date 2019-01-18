@@ -1,0 +1,22 @@
+@import 'package:angular_components/css/material/material';
+
+:host {
+
+}
+
+::ng-deep header.material-header.material-header {
+  background-color: $mat-indigo;
+  color: $mat-white;
+}
+
+.header-logo span {
+  color: $mat-white;
+}
+
+.material-navigation a {
+  color: $mat-white;
+}
+
+.user-profile {
+  border-radius: $mat-grid * 4;
+}

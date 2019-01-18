@@ -1,0 +1,18 @@
+<div class="board-layout">
+    <div id="profile" class="profile" *ngIf="service.user != null">
+        <img class="profile-image" [src]="service.user.photoURL">
+        <div class="profile-name">{{service.user.displayName}}</div>
+        <div class="profile-email">({{service.user.email}})</div>
+        <material-button raised (click)="service.signOut()">Sign out</material-button>
+    </div>
+    <div id="login" class="login" *ngIf="service.user == null">
+        <material-button raised (click)="service.signInWithGoogle()">
+            Sign in with Google
+        </material-button>
+    </div>
+    <div class="container">
+        <new-post></new-post>
+        <posts></posts>
+    </div>
+    <footer></footer>
+</div>

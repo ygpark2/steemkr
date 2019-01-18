@@ -1,0 +1,83 @@
+@import 'package:angular_components/css/material/material';
+
+$mdc-card-image: 'http://material-components-web.appspot.com/images/16-9.jpg';
+
+:host {
+  display: flex;
+}
+
+.name-layout {
+  width: 100%;
+}
+
+.layout-container {
+  text-align: center;
+  padding: $mat-grid;
+}
+
+
+.name-list-card-size {
+  width: $mat-grid * 36;
+}
+
+// Provide material styling for the title.
+.name-list-card__title {
+  display: inline-flex;
+  @include mat-font-title;
+  line-height: 1em; // legacy setting
+  margin: 0;
+
+  .first {
+    color: $mat-white;
+    font-weight: lighter;
+  }
+  .second {
+    color: $mat-white;
+    font-weight: bold;
+  }
+}
+
+// Provider material styling for the subtitle.
+:ng-deep .name-list-card__subtitle {
+  color: $mat-white;
+  @include mat-font-subhead;
+  margin: 0;
+}
+
+// Use the same image as the mdc-web example.
+.name-list-card__media {
+  background-image: url($mdc-card-image);
+}
+
+.name-list-card__media-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: $mat-white;
+  padding: $mat-grid * 4;
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.name-list-border {
+  border: 1px solid $mat-white;
+  margin: $mat-grid;
+}
+
+.mdc-card__actions {
+  justify-content: center;
+}
+
+.mdc-card__action-buttons material-button {
+  border: 2px solid $mat-white;
+}
+
+@media screen and (max-width: 851px) {
+  .name-headline {
+    @include mat-font-headline;
+  }
+
+  .name-sub-headline {
+    @include mat-font-subhead;
+  }
+}

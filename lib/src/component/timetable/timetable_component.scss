@@ -1,0 +1,17 @@
+@import 'package:angular_components/css/material/material';
+
+$mdc-card-image: 'http://material-components-web.appspot.com/images/16-9.jpg';
+
+:host {
+  display: flex;
+}
+
+.timetable-layout {
+  width: 100%;
+}
+
+.layout-container {
+  text-align: center;
+  padding: $mat-grid;
+}
+
