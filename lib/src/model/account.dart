@@ -1,7 +1,11 @@
+library steemkr.src.model.account;
+
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 
-part 'test_class.g.dart';
+part 'account.g.dart';
 
 /*
 "id":28,
@@ -78,10 +82,123 @@ part 'test_class.g.dart';
 "post_history":[],
 "vote_history":[],
 "other_history":[],"witness_votes":[],"tags_usage":[],"guest_bloggers":[]}
+
  */
+
+abstract class Owner implements Built<Owner, OwnerBuilder> {
+  int get weight_threshold;
+  BuiltList<String> get account_auths;
+  BuiltList<BuiltList<JsonObject>> get key_auths;
+
+  Owner._();
+
+  factory Owner([updates(OwnerBuilder b)]) = _$Owner;
+
+  static Serializer<Owner> get serializer => _$ownerSerializer;
+}
+
+abstract class Active implements Built<Active, ActiveBuilder> {
+  int get weight_threshold;
+  BuiltList<String> get account_auths;
+  BuiltList<BuiltList<JsonObject>> get key_auths;
+
+  Active._();
+
+  factory Active([updates(ActiveBuilder b)]) = _$Active;
+
+  static Serializer<Active> get serializer => _$activeSerializer;
+}
+
+abstract class Posting implements Built<Posting, PostingBuilder> {
+  int get weight_threshold;
+  BuiltList<String> get account_auths;
+  BuiltList<BuiltList<JsonObject>> get key_auths;
+
+  Posting._();
+
+  factory Posting([updates(PostingBuilder b)]) = _$Posting;
+
+  static Serializer<Posting> get serializer => _$postingSerializer;
+}
+
+abstract class VotingManabar
+    implements Built<VotingManabar, VotingManabarBuilder> {
+  String get current_mana;
+  int get last_update_time;
+
+  VotingManabar._();
+
+  factory VotingManabar([updates(VotingManabarBuilder b)]) = _$VotingManabar;
+
+  static Serializer<VotingManabar> get serializer => _$votingManabarSerializer;
+}
+
 abstract class Account implements Built<Account, AccountBuilder> {
+  int get id;
   String get name;
-  String get result;
+  Owner get owner;
+  Active get active;
+  Posting get posting;
+
+  String get memo_key;
+  String get json_metadata;
+  String get proxy;
+  DateTime get last_owner_update;
+  DateTime get last_account_update;
+  DateTime get created;
+  bool get mined;
+  String get recovery_account;
+  DateTime get last_account_recovery;
+  String get reset_account;
+  int get comment_count;
+  int get lifetime_vote_count;
+  int get post_count;
+  bool get can_vote;
+  VotingManabar get voting_manabar;
+  int get voting_power;
+
+  String get balance;
+  String get savings_balance;
+  String get sbd_balance;
+  String get sbd_seconds;
+  DateTime get sbd_seconds_last_update;
+  DateTime get sbd_last_interest_payment;
+  String get savings_sbd_balance;
+  String get savings_sbd_seconds;
+  DateTime get savings_sbd_seconds_last_update;
+  DateTime get savings_sbd_last_interest_payment;
+  int get savings_withdraw_requests;
+  String get reward_sbd_balance;
+  String get reward_steem_balance;
+  String get reward_vesting_balance;
+  String get reward_vesting_steem;
+  String get vesting_shares;
+  String get delegated_vesting_shares;
+  String get received_vesting_shares;
+  String get vesting_withdraw_rate;
+  DateTime get next_vesting_withdrawal;
+  int get withdrawn;
+  String get to_withdraw;
+  int get withdraw_routes;
+  int get curation_rewards;
+  int get posting_rewards;
+  BuiltList<JsonObject> get proxied_vsf_votes;
+  int get witnesses_voted_for;
+  DateTime get last_post;
+  DateTime get last_root_post;
+  DateTime get last_vote_time;
+  int get post_bandwidth;
+  int get pending_claimed_accounts;
+  String get vesting_balance;
+  String get reputation;
+  BuiltList<JsonObject> get transfer_history;
+  BuiltList<JsonObject> get market_history;
+  BuiltList<JsonObject> get post_history;
+  BuiltList<JsonObject> get vote_history;
+  BuiltList<JsonObject> get other_history;
+  BuiltList<JsonObject> get witness_votes;
+  BuiltList<JsonObject> get tags_usage;
+  BuiltList<JsonObject> get guest_bloggers;
 
   Account._();
 

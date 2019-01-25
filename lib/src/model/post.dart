@@ -1,4 +1,4 @@
-library yogamindful.src.model.post;
+library steemkr.src.model.post;
 
 const String jsonTagFirst = "first";
 const String jsonTagSecond = "second";

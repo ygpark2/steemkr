@@ -1,4 +1,4 @@
-library yogamindful.src.model.timetable;
+library steemkr.src.model.timetable;
 
 class Timetable {
   final int id;
